@@ -1,0 +1,21 @@
+﻿{
+  "displayName": "Admin MFA Required - SecureCloud Corp",
+  "state": "enabled",
+  "conditions": {
+    "users": {
+      "includeRoles": [
+        "62e90394-69f5-4237-9190-012177145e10",
+        "fe930be7-5e62-47db-91af-98c3a49a38b1"
+      ],
+      "excludeUsers": ["emergency-access-account"]
+    },
+    "applications": {
+      "includeApplications": ["All"]
+    }
+  },
+  "grantControls": {
+    "operator": "AND",
+    "builtInControls": ["mfa"]
+  },
+  "description": "Requires multi-factor authentication for all Global and User Administrators"
+}

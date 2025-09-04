@@ -1,0 +1,25 @@
+﻿{
+  "displayName": "Company Devices Required - SecureCloud Corp",
+  "state": "enabled",
+  "conditions": {
+    "users": {
+      "includeUsers": ["All"],
+      "excludeUsers": ["emergency-access-account"]
+    },
+    "applications": {
+      "includeApplications": [
+        "00000003-0000-0000-c000-000000000000",
+        "00000002-0000-0000-c000-000000000000"
+      ]
+    },
+    "deviceStates": {
+      "includeStates": ["All"],
+      "excludeStates": ["domainJoined", "compliant"]
+    }
+  },
+  "grantControls": {
+    "operator": "OR",
+    "builtInControls": ["compliantDevice", "domainJoinedDevice"]
+  },
+  "description": "Requires company-managed devices for Office 365 and SharePoint access"
+}

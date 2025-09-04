@@ -1,0 +1,22 @@
+﻿{
+  "displayName": "Block Risky Countries - SecureCloud Corp",
+  "state": "enabled",
+  "conditions": {
+    "users": {
+      "includeUsers": ["All"],
+      "excludeUsers": ["emergency-access-account"]
+    },
+    "applications": {
+      "includeApplications": ["All"]
+    },
+    "locations": {
+      "includeLocations": ["AllTrusted"],
+      "excludeLocations": ["Named-HighRiskCountries"]
+    }
+  },
+  "grantControls": {
+    "operator": "OR",
+    "builtInControls": ["block"]
+  },
+  "description": "Blocks access from high-risk countries (China, Russia, North Korea)"
+}
